@@ -22,7 +22,7 @@ class PokemonGallery extends React.Component {
     const pokemons = pokemonsToLoad.map(({ name, image_url }) =>
       <Pokemon key={name} name={name} imageUrl={image_url} />);
 
-    return <div>
+    return <div className='gallery'>
       <div className='pokemons'>
         {pokemons}
       </div>
