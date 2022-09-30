@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pokemons {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+figure {
+  border: 1px solid gray;
+  padding: 1em;
+  text-align: center;
+}
