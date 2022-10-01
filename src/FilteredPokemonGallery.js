@@ -2,7 +2,8 @@ import React from 'react';
 import PokemonGallery from './PokemonGallery.js';
 
 const Input = ({ value, onChangeHandler }) =>
-  <input value={value} onChange={onChangeHandler} />;
+  <input value={value} onChange={(event) =>
+    onChangeHandler(event.target.value)} />;
 
 class FilteredPokemons extends React.Component {
   constructor(props) {
@@ -16,9 +17,8 @@ class FilteredPokemons extends React.Component {
       name.includes(this.state.filter));
   }
 
-  handleOnChange(event) {
-    const value = event.target.value;
-    this.setState((_) => ({ filter: value, inputText: value }));
+  handleOnChange(value) {
+    this.setState({ filter: value, inputText: value });
   }
 
   render() {
